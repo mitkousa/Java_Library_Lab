@@ -27,4 +27,11 @@ public class Library {
         int relevantBook = this.booksCollection.indexOf(book);
         return booksCollection.remove(relevantBook);
     }
+
+    public void lendBook(Book book, Borrower borrower) {
+        if (borrower.getBooks() < 2){
+            this.removeBook(book);
+            borrower.addBook(book);
+        }
+    }
 }

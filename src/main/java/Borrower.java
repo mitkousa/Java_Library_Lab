@@ -8,4 +8,12 @@ public class Borrower {
         this.name = name;
         this.borrowerCollection = new ArrayList<>();
     }
+
+    public int getBooks() {
+        return this.borrowerCollection.size();
+    }
+
+    public void addBook(Book book) {
+        this.borrowerCollection.add(book);
+    }
 }
