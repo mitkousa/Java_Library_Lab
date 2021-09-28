@@ -22,4 +22,9 @@ public class Library {
             this.booksCollection.add(book);
         }
     }
+
+    public Book removeBook(Book book) {
+        int relevantBook = this.booksCollection.indexOf(book);
+        return booksCollection.remove(relevantBook);
+    }
 }

@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -28,5 +29,15 @@ public class LibraryTest {
         library.addBook(book);
         assertEquals(1, library.getNumberOfBooks());
     }
+
+    @Test
+    public void canRemoveBookFromCollection(){
+        library.addBook(book);
+        library.addBook(book);
+        library.removeBook(book);
+        assertEquals(1, library.getNumberOfBooks());
+    }
+
+    
 
 }
