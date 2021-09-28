@@ -16,4 +16,10 @@ public class Library {
     public int getNumberOfBooks() {
         return this.booksCollection.size();
     }
+
+    public void addBook(Book book) {
+        if (getCapacity() > 0) {
+            this.booksCollection.add(book);
+        }
+    }
 }
