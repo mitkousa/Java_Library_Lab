@@ -44,9 +44,13 @@ public class LibraryTest {
     public void canLendBook (){
         library.addBook(book);
         library.addBook(book);
+        library.addBook(book);
+        library.addBook(book);
         library.lendBook(book, borrower);
-        assertEquals(1, library.getNumberOfBooks());
-        assertEquals(1, borrower.getBooks());
+        library.lendBook(book, borrower);
+        library.lendBook(book, borrower);
+        assertEquals(2, library.getNumberOfBooks());
+        assertEquals(2, borrower.getBooks());
     }
 
 }
